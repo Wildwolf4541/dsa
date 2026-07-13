@@ -26,6 +26,7 @@ Kahn's Algorithm-> push nodes in a queue whose indegree is 0.
 
     - Course Schedule I  - Cycle Detection Directed.
     - Course Schedule II - Topological Sort
-    - Largest Colour Value in a Directed Graph - 
+    - Largest Colour Value in a Directed Graph - Topological Sort, colourcount array maintain and update max
+                                                 colour coming on that node. Return the Max Count.
 
 */
