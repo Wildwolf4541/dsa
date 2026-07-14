@@ -1,6 +1,5 @@
 /*
     - Reorder Routes- forward and backward edgeLists banengi.
-    - Rotten Oranges- Multi BFS hoga.
     
     - Cycle Detection- Undirected BFS -> visited, parent array, if nbr not parent -> cycle
     - Cycle Detection- Undirected DFS -> visited, parent int, if nbr not parent -> cycle
@@ -11,7 +10,10 @@
 */
 
 /* 
-Topological Sort -> Nodes with no pre-requiste should be visited first.
+=================================================================
+                    TOPOLOGICAL SORT
+=================================================================
+Nodes with no pre-requiste should be visited first.
     * sorting (Arranging nodes) in a specific order.
     * Directed Acyclic Graph (DAG).
     * Not for undirected graphs and cyclic graphs.
@@ -20,13 +22,34 @@ Two ways to implement-
     * BFS based- // Kahn's Algorithm //
     * DFS based- Nodes storing order changes. use of deque. backtracking mei push karenge node.
 
-Kahn's Algorithm-> push nodes in a queue whose indegree is 0. 
-                   push nbrs of those nodes when indegree becomes zero.
+Kahn's Algorithm-> 
+1. Calculate indegree of every node.
+2. Push all nodes with indegree = 0 into queue.
+3. Pop node.
+4. Add to answer.
+5. Decrease indegree of neighbours.
+6. If neighbour indegree becomes 0, push it.
 
+Cycle Detection using Kahn:
+- If topoSort size < number of nodes
+  => Cycle exists.
 
     - Course Schedule I  - Cycle Detection Directed.
     - Course Schedule II - Topological Sort
     - Largest Colour Value in a Directed Graph - Topological Sort, colourcount array maintain and update max
                                                  colour coming on that node. Return the Max Count.
 
+*/
+
+/*
+=================================================================
+                    GRID TRAVERSAL
+=================================================================
+har cell ko ek node consider karo aur neighours saath vaale cells. either 4 or 8.
+dx=[0,-1,0,1], dy=[-1,0,1,0]
+dx = {-1,-1,-1,0,0,1,1,1}, dy = {-1,0,1,-1,1,-1,0,1}
+
+    - flood fill- Store original color. BFS/DFS only on cells having original color. Change color while visiting.
+    - number of islands- Traverse entire grid. If cell == '1': Multi DFS/BFS -> Mark visited -> count++ in main.
+    - Rotten Oranges- Multi BFS hoga. count on levels. push rotten oranges only.
 */
