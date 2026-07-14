@@ -1,5 +1,7 @@
 /*
     - Reorder Routes- forward and backward edgeLists banengi.
+    - Number of Provinces- for each unvisited node, run a bfs/dfs loop.
+    - Number of operations to make networks connected- Find component counts, if givenedges>=n-1 ?count-1:-1
     
     - Cycle Detection- Undirected BFS -> visited, parent array, if nbr not parent -> cycle
     - Cycle Detection- Undirected DFS -> visited, parent int, if nbr not parent -> cycle
@@ -46,4 +48,12 @@ dx = {-1,-1,-1,0,0,1,1,1}, dy = {-1,0,1,-1,1,-1,0,1}
     - flood fill- Store original color. BFS/DFS only on cells having original color. Change color while visiting.
     - number of islands- Traverse entire grid. If cell == '1': Multi DFS/BFS -> Mark visited -> count++ in main.
     - Rotten Oranges- Multi BFS hoga. count on levels. push rotten oranges only.
+    - 01 Matrix- push all 0s in queue, BFS on nodes to search for 1s and unvisited. increment them.
+    - Geeks Village and Wells- almost same as 01 Matrix.
+*/
+
+/*
+=================================================================
+                    Shortest Path
+=================================================================
 */
