@@ -24,20 +24,14 @@ Two ways to implement-
 
 Kahn's Algorithm-> 
 1. Calculate indegree of every node.
-2. Push all nodes with indegree = 0 into queue.
-3. Pop node.
-4. Add to answer.
-5. Decrease indegree of neighbours.
-6. If neighbour indegree becomes 0, push it.
+2. Push all nodes with indegree = 0 into queue. Pop node. Add to answer.
+3. Decrease indegree of neighbours. If neighbour indegree becomes 0, push it.
 
-Cycle Detection using Kahn:
-- If topoSort size < number of nodes
-  => Cycle exists.
+Cycle Detection using Kahn: If topoSort size < number of nodes => Cycle exists.
 
     - Course Schedule I  - Cycle Detection Directed.
     - Course Schedule II - Topological Sort
-    - Largest Colour Value in a Directed Graph - Topological Sort, colourcount array maintain and update max
-                                                 colour coming on that node. Return the Max Count.
+    - Largest Colour Value in a Directed Graph - Topological Sort, colourcount array maintain and update max colour coming on that node. Return the Max Count.
 
 */
 
