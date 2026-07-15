@@ -9,6 +9,8 @@
 
     - Eventual Safe States- Cycle Detection Directed, Answer is (All Nodes - PathVisited).
     - Longest Cycle- Cycle Detection Directed, path Visited ki values. (Node-Nbr+1).
+    - Is Graph Bipartite- Normal BFS/DFS with !visited. assign different colours to nbrs, if same colour found return false, else true.
+
 */
 
 /* 
@@ -50,10 +52,31 @@ dx = {-1,-1,-1,0,0,1,1,1}, dy = {-1,0,1,-1,1,-1,0,1}
     - Rotten Oranges- Multi BFS hoga. count on levels. push rotten oranges only.
     - 01 Matrix- push all 0s in queue, BFS on nodes to search for 1s and unvisited. increment them.
     - Geeks Village and Wells- almost same as 01 Matrix.
+    - Number of enclaves- Borders se DFS start karo jahan pe 1 hai. Jahan dfs mei 1 mile mark it 0. end mei traverse the grid and count 1s left.
+    - Surrounded Regions- Same as Number of enclaves.
 */
 
 /*
 =================================================================
                     Shortest Path
 =================================================================
+Two Type-> 
+    * Single Source Shortest Path
+        * Weighted -> +ve Djikstra, -ve Bellman-Ford
+        * UnWeighted -> BFS
+
+    * All Source Shortest Path
+        -> -ve Floyd Warshall
+    
+    
+    - Snakes and ladders- change the board using flag, build the graph for steps, use levelwise bfs.
+    
+Djikstra Algorithm-> 
+1. Initialize distances
+2. Push source in a queue, Pop minimum, Skip outdated
+3, Traverse neighbors, Better options-> Update distance
+4. Push neighbor
+5. Repeat until empty and Return distances
+
+
 */
