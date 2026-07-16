@@ -81,4 +81,13 @@ Djikstra Algorithm->
     - Cheapest Flights Within K Stops- BFS (Queue). Store {stops,node,cost}. Relax only if cheaper and stops <= k.
     - Network Delay Time- Dijkstra. Store {time,node}. Find shortest time to every node, answer = maximum distance, if unreachable return -1.
     - Number of Ways to Arrive at Destination- Modified Dijkstra. Maintain dist[] and ways[]. Better path -> update both, equal path -> ways += ways[parent].
+
+Bellman-Ford-> (-ve weights, -ve weight cycle) (Relax the edges n-1 times)
+(Order of edges is not important)
+(if after n-1 relaxations, 1 more relaxation is possbile, -ve weight cycle exists.)
+
+Floyd-Warshall-> Triple loop (src,k,dst). DP(mem). Find shortest path between every pair of nodes.
+(if after n-1 relaxations, 1 more relaxation is possbile, -ve weight cycle exists.)  
+
+    - Find the City With the Smallest Number of Neighbors at a Threshold Distance- Floyd-Warshall. Compute all-pairs shortest paths, count reachable cities, choose minimum count (largest index on tie).
 */
