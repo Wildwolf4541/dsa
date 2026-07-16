@@ -68,9 +68,6 @@ Two Type->
     * All Source Shortest Path
         -> -ve Floyd Warshall
     
-    
-    - Snakes and ladders- change the board using flag, build the graph for steps, use levelwise bfs.
-    
 Djikstra Algorithm-> 
 1. Initialize distances
 2. Push source in a queue, Pop minimum, Skip outdated
@@ -78,5 +75,10 @@ Djikstra Algorithm->
 4. Push neighbor
 5. Repeat until empty and Return distances
 
-
+    - Snakes and ladders- change the board using flag, build the graph for steps, use levelwise bfs.
+    - Dijkstra Algorithm- Priority Queue (min-heap). Store {dist,node}. Relax edges, skip outdated entries (if currDist > dist[node]).
+    - Path With Minimum Effort- Dijkstra. Store {effort,{x,y}}. New effort = max(currEffort, abs(heightDiff)). Minimize maximum effort.
+    - Cheapest Flights Within K Stops- BFS (Queue). Store {stops,node,cost}. Relax only if cheaper and stops <= k.
+    - Network Delay Time- Dijkstra. Store {time,node}. Find shortest time to every node, answer = maximum distance, if unreachable return -1.
+    - Number of Ways to Arrive at Destination- Modified Dijkstra. Maintain dist[] and ways[]. Better path -> update both, equal path -> ways += ways[parent].
 */
