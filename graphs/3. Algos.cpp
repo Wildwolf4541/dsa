@@ -91,3 +91,43 @@ Floyd-Warshall-> Triple loop (src,k,dst). DP(mem). Find shortest path between ev
 
     - Find the City With the Smallest Number of Neighbors at a Threshold Distance- Floyd-Warshall. Compute all-pairs shortest paths, count reachable cities, choose minimum count (largest index on tie).
 */
+
+/*
+=================================================================
+                    Disjoint Union Set (DSU)
+=================================================================
+Related to Grouping.
+
+DSU block- 
+1. Parent array.
+2. Find() -> Group Leader, Recursive, Path compression optimization.
+3. Union()-> Linking, Union by Rank optimization.
+
+* Node parent of itself is the Group Leader
+Path compression mei poore Group ka parent Group Leader hi Set Kardo.
+* Union mein chote group ke leader ka parent bade group ka leader hona chahiye.
+By Rank of Group Leaders karoge union toh time optimize hoga.
+
+*/
+
+/*
+Minimum Spanning Tree (MST) is a subset of the edges of a connected, weighted, undirected graph such that:
+    * All vertices are connected.
+    * No cycles are formed.
+    * The total edge weight is minimum.
+
+Prim's Algorithm-> Helps find MST.
+Kruskal's Algorithms -> Helps find MST. Using DSU.
+
+    - Accounts Merge- Map email to account. Common email -> Union accounts. Group emails by parent, sort, prepend account name.
+    - Making a Large Island- Build DSU for all 1's. For each 0, merge unique neighbouring components and take maximum size.
+    - Most Stones Removed- Treat rows and columns as DSU nodes. Union(row, col). Answer = Total Stones - Number of Connected Components.
+*/
+
+/*
+Strongly Connected Components (Kosaraju's Algorithm) -> Every pair of vertex is reachable to each other.
+(for directed graphs only.)
+    * Sort all the edges according to their finishing time.
+    * Reverse the graph.
+    * Do DFS. 
+*/
