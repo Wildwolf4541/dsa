@@ -1,0 +1,14 @@
+map()-> can turn datainto UI
+fiter()-> can filter out few items.
+find()-> can pick specific items.
+includes()-> can check conditions.
+
+optional chaining is a method of adding ?. which means access the thing only if it is available.
+example-> user?.name -> find name of user only if user exists. If not-> undefined error comes.
+
+nullish coalescing is used for fallback values (??)
+example-> user?.name ?? "guest" -> if name is not there use guest.
+
+Asynchronous JS
+A Promise represents a value that u don't have yet.
+: can be pending, fulfilled, rejected.
